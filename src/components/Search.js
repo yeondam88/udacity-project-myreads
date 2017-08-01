@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import * as BooksAPI from "../BooksAPI";
 
@@ -87,5 +88,9 @@ class Search extends React.Component {
     );
   }
 }
+
+Search.propTypes = {
+  updateShelf: PropTypes.func.isRequired
+};
 
 export default Search;
