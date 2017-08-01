@@ -1,6 +1,28 @@
-This is the starter template for the final assessment project for Udacity's React Fundamentals course, developed by [React Training](https://reacttraining.com). The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+## About this Project
+This is first projects in Udacity React Nanodegree program. 
+From 1st curriculrum in React Nanodegree, I've learned React fundamental. To prove the knowledge I gained from this program, I need to implement the features from the requirement.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+### Project requirements
++ Create 3 book shelves (CurrentlyReading, WantToRead, Read)
++ Each shelf's books need to be able to update to different shelf by selecting the shelf status
++ Be able to search the books from Books API
++ Be able to add the books from search results (newly added books need to be same selected value on shelves page)
+
+## Implemented features
+ + Ability to search books from Udacity Books API
+ + You can add books from search results
+ + You can update your current book shelf status (ex: update from 'Currently Reading' to 'Want to Read')
+
+### Here is the additional libraries used for this project
++ react-router-dom
++ prop-types
+
+## Running the Demo locally
+```
+$ git clone https://github.com/yeondam88/udacity-project-myreads.git
+$ npm install
+$ npm start
+```
 
 ## What You're Getting
 ```
