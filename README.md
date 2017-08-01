@@ -8,7 +8,7 @@ From 1st curriculrum in React Nanodegree, I've learned React fundamental. To pro
 + Be able to search the books from Books API
 + Be able to add the books from search results (newly added books need to be same selected value on shelves page)
 
-## Implemented features
+### Implemented features
  + Ability to search books from Udacity Books API
  + You can add books from search results
  + You can update your current book shelf status (ex: update from 'Currently Reading' to 'Want to Read')
