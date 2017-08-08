@@ -6,16 +6,28 @@ import * as BooksAPI from "../BooksAPI";
 class Search extends React.Component {
   state = {
     query: "",
-    searchedBooks: []
+    books: []
   };
 
   onSearch = query => {
-    if (query) {
-      BooksAPI.search(query, 20).then(books => {
-        this.setState({ searchedBooks: books });
+    if (!query) {
+      this.setState({
+        query: "",
+        books: []
       });
     } else {
-      this.setState({ searchedBooks: [] });
+      this.setState({ query: query.trim() });
+      BooksAPI.search(query).then(books => {
+        if (books.error) {
+          books = [];
+        }
+        books.map(book =>
+          this.props.books
+            .filter(b => b.id === book.id)
+            .map(b => (book.shelf = b.shelf))
+        );
+        this.setState({ books });
+      });
     }
   };
 
@@ -41,7 +53,7 @@ class Search extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.searchedBooks.map((book, index) => {
+            {this.state.books.map((book, index) => {
               const imageLink = book.imageLinks.smallThumbnail;
               return (
                 <li key={index}>
